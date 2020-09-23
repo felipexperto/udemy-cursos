@@ -3,21 +3,19 @@ const funcaoModulo = (function () {
   const mensagemDeErro = 'Erro!',
         mensagemDeSucesso = 'Sucesso!';
 
-  function metodoRestrito() {
-    console.log('Você executou o método restrito');
+  function metodoPrivado() {
+    console.log('Você executou o método privado');
   }
 
   function exibeMensagemDeErro() {
     console.log(mensagemDeErro);
   }
 
-  function exibeMensagemDeSucesso() {
-    console.log(mensagemDeSucesso);
-  }
-
   return {
-    metodoAcessivelGlobalmente: () => console.log('Você executou o método público'),
-    exibeMensagemDeSucesso,
+    metodoPublico: () => console.log('Você executou o método público'),
+    exibeMensagemDeSucesso: function() {
+      console.log(mensagemDeSucesso);
+    },
   }
 
 })();
@@ -27,17 +25,17 @@ const funcaoModulo = (function () {
   ou seja, estão dentro do `return {}`
   e por isso podem ser executados no escopo global
 */
-funcaoModulo.metodoAcessivelGlobalmente();
+funcaoModulo.metodoPublico();
 funcaoModulo.exibeMensagemDeSucesso();
 
 /*
-  Segura esse `funcaoModulo.metodoRestrito is not a function` haha
+  Segura esse `funcaoModulo.metodoPrivado is not a function` haha
   Isso acontece porque o método foi criado dentro da `funcaoModulo`
   mas não foi exportada/retornada `return {}`.
   Também aconteceria um erro se tentássemos executar a
   funcaoModulo.exibeMensagemDeErro()
 */
-funcaoModulo.metodoRestrito();
+funcaoModulo.metodoPrivado();
 
 /*
   As constantes mensagemDeErro e `mensagemDeSucesso`

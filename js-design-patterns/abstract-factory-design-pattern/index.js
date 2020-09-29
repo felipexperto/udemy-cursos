@@ -1,20 +1,51 @@
 (function() {
+  /*
+    Iniciando a abstract factory
+  */
+  function redCircle() {
+    
+  }
+  redCircle.prototype.create = function() {
+    this.item = { shape: 'circle', color: 'red' };
+    return this;
+  }
+  function blueCircle() {
+    
+  }
+  blueCircle.prototype.create = function() {
+    this.item = { shape: 'circle', color: 'blue' };
+    return this;
+  }
+  function circleFactory() {
+    this.types = {};
+    this.create = function(type) {
+      return new this.types[type]().create();
+    };
+    this.register = function(type, cls) {
+      if (cls.prototype.create) {
+        this.types[type] = cls;
+      }
+    }
+  }
 
   /*
-    Iniciando singleton
+    Iniciando a singleton
   */
   const CircleGeneratorSingleton = (function() {
     let instance;
 
     function init() {
-      const _arrayOfShapes = [];
+      const _arrayOfShapes = [],
+            _cf = new circleFactory();
+            _cf.register('red', redCircle);
+            _cf.register('blue', blueCircle);
 
       const _position = (circle, left, top) => {
         circle.left = left;
         circle.top = top;
       };
-      const create = (left, top) => {
-        const circle = { shape: 'circle' };
+      const create = (left, top, type) => {
+        const circle = _cf.create(type).item;
         _position(circle, left, top)
         return circle;
       }
@@ -55,7 +86,7 @@
         // atribuindo uma instância do singleton na variavel cg
         const cg = CircleGeneratorSingleton.getInstance();
         // criando um item com o método create()
-        const circle = cg.create(e.pageX, e.pageY);
+        const circle = cg.create(e.pageX, e.pageY, 'red');
         // adicionando no array de itens com addShapeToArray()
         cg.addShapeToArray(circle);
         // exibindo no console
@@ -68,7 +99,7 @@
           // vamos tentar iniciar a instância novamente
           const cg = CircleGeneratorSingleton.getInstance();
           // passando um posicionamento aleatório dessa vez
-          const circle = cg.create(Math.round(Math.random()*200), Math.round(Math.random()*200));
+          const circle = cg.create(Math.round(Math.random()*200), Math.round(Math.random()*200), 'blue');
           // adicionando no array de itens com addShapeToArray() como de costume
           cg.addShapeToArray(circle);
           // exibindo no console

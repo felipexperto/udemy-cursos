@@ -1,20 +1,38 @@
 (function() {
+  /*
+    Iniciando a factory
+  */
+  function redCircle() {
+    this.item = { shape: 'circle', color: 'red' };
+  }
+  function blueCircle() {
+    this.item = { shape: 'circle', color: 'blue' };
+  }
+  function circleFactory() {
+    this.create = function(color) {
+      return color === 'blue' ? new blueCircle() : new redCircle();
+    } 
+  }
 
   /*
-    Iniciando singleton
+    Iniciando a singleton
+    Agora ela utiliza a factory: `_cf = new circleFactory()`
+    e seu método create `_cf.create(color).item`
+    para gerar um item com parâmetro `color`
   */
   const CircleGeneratorSingleton = (function() {
     let instance;
 
     function init() {
-      const _arrayOfShapes = [];
+      const _arrayOfShapes = [],
+            _cf = new circleFactory();
 
       const _position = (circle, left, top) => {
         circle.left = left;
         circle.top = top;
       };
-      const create = (left, top) => {
-        const circle = { shape: 'circle' };
+      const create = (left, top, color) => {
+        const circle = _cf.create(color).item;
         _position(circle, left, top)
         return circle;
       }
@@ -55,7 +73,7 @@
         // atribuindo uma instância do singleton na variavel cg
         const cg = CircleGeneratorSingleton.getInstance();
         // criando um item com o método create()
-        const circle = cg.create(e.pageX, e.pageY);
+        const circle = cg.create(e.pageX, e.pageY, 'red');
         // adicionando no array de itens com addShapeToArray()
         cg.addShapeToArray(circle);
         // exibindo no console
@@ -68,7 +86,7 @@
           // vamos tentar iniciar a instância novamente
           const cg = CircleGeneratorSingleton.getInstance();
           // passando um posicionamento aleatório dessa vez
-          const circle = cg.create(Math.round(Math.random()*200), Math.round(Math.random()*200));
+          const circle = cg.create(Math.round(Math.random()*200), Math.round(Math.random()*200), 'blue');
           // adicionando no array de itens com addShapeToArray() como de costume
           cg.addShapeToArray(circle);
           // exibindo no console

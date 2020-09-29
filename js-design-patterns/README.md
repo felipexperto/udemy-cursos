@@ -83,11 +83,23 @@ Em outras palavras:
 ### The Singleton Design Pattern
 
 Uma vantagem do Singleton é que você pode controlar quando será instanciado, ou seja, não é instanciado no início da aplicação.  
-Além disso, a ideia é que ele seja iniciado somente uma vez agindo como uma interface global.
+Além disso, a ideia é que ele seja iniciado somente uma vez agindo como uma interface global.  
 O exemplo de [Singleton Design Pattern](./singleton-design-pattern/index.html) foi testado utilizando o evento de `click` e `keypress` e, foi possível compartilhar o estado de um array, adicionando itens por meio de clique na página ou apertando a letra "c".
 
+## **Aula 8**
+### The Factory Design Pattern
 
+Para quando você precisa de controle sobre a customização de um item.  
+Extrai a criação de um item do objeto que está criando-o, ou seja, a criação ocorre de uma maneira mais genérica, facilitando atualizações ou novas versões destes itens por não estarem engessados.
+No exemplo de [Factory Design Pattern](./factory-design-pattern/index.html) extraímos a função `create` da Singleton e implementamos o retorno do parâmetro `color`, sendo `red` ou `blue`.
 
+## **Aula 9**
+### The Abstract Factory Design Pattern
+
+Mais dinâmica e genérica do que a Factory e você só criará uma Abstract Factory caso a primeira esteja com a lógica muito complicada, engessada e/ou seja necessário adicionar mais funcionalidades.  
+No exemplo de [Abstract Factory Design Pattern](./abstract-factory-design-pattern/index.html) criamos uma função e atribuímos o método `create` à um `prototype` de `redCircle` e 
+`blueCircle`, essa abstração permite o registro de múltiplos `types` de objetos e permite verificar quais são classes válidas `if (cls.prototype.create)` para criar itens.  
+Ainda sem certeza de onde utilizar isso 🤷‍♂️
 
 
 

@@ -75,7 +75,16 @@ Em outras palavras:
 * Essa função tem como parâmetros obrigatórios `win, doc, $` e recebe `window, document, jQuery`;
 * Ao final, existe um `if` que confere se `funcaoModulo` existe como método no escopo global, ou seja, dentro da variável `window`. Se não, cria esse método.
 
+---
 
+# Creational Design Pattern
+
+## **Aula 7**
+### The Singleton Design Pattern
+
+Uma vantagem do Singleton é que você pode controlar quando será instanciado, ou seja, não é instanciado no início da aplicação.  
+Além disso, a ideia é que ele seja iniciado somente uma vez agindo como uma interface global.
+O exemplo de [Singleton Design Pattern](./singleton-design-pattern/index.html) foi testado utilizando o evento de `click` e `keypress` e, foi possível compartilhar o estado de um array, adicionando itens por meio de clique na página ou apertando a letra "c".
 
 
 

@@ -101,5 +101,11 @@ No exemplo de [Abstract Factory Design Pattern](./abstract-factory-design-patter
 `blueCircle`, essa abstração permite o registro de múltiplos `types` de objetos e permite verificar quais são classes válidas `if (cls.prototype.create)` para criar itens.  
 Ainda sem certeza de onde utilizar isso 🤷‍♂️
 
+## **Aula 10 e 11**
+### The Builder Design Pattern
+
+Segundo o autor, um ótimo exemplo é o método `$` do jQuery pelo fato dele possuir múltiplos usos.
+Normalmente é uma abordagem utilizada quando precisamos agrupar múltiplos objetos e precisamos que eles sejam utilizados por um terceiro objeto.
+
 
 

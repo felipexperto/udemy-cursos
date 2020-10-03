@@ -2,19 +2,19 @@
   /*
     Iniciando o builder
   */
- function Circle() {
-  this.item = { shape: 'circle', color: 'red' };
- }
- Circle.prototype.move = function(circle, left, top) {
-  circle.left = left;
-  circle.top = top;
- }
- Circle.prototype.color = function(clr) {
-  this.item = { color: clr };
- }
- Circle.prototype.get = function () {
-   return this.item;
- }
+  function Circle() {
+    this.item = { shape: 'circle', color: 'red' };
+  }
+  Circle.prototype.move = function(circle, left, top) {
+    circle.item.left = left;
+    circle.item.top = top;
+  }
+  Circle.prototype.color = function(clr) {
+    this.item = { ...this.item, color: clr };
+  }
+  Circle.prototype.get = function () {
+    return this.item;
+  }
 
   function redCircleBuilder() {
     this.item = new Circle();
@@ -64,13 +64,9 @@
             _cf.register('red', redCircleBuilder);
             _cf.register('blue', blueCircleBuilder);
 
-      const _position = (circle, left, top) => {
-        circle.left = left;
-        circle.top = top;
-      };
       const create = (left, top, type) => {
-        const circle = _cf.create(type).get();
-        _position(circle, left, top)
+        const circle = _cf.create(type);
+        circle.move(circle, left, top)
         return circle;
       }
 

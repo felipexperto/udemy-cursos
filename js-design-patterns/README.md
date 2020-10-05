@@ -104,8 +104,16 @@ Ainda sem certeza de onde utilizar isso 🤷‍♂️
 ## **Aula 10 e 11**
 ### The Builder Design Pattern
 
-Segundo o autor, um ótimo exemplo é o método `$` do jQuery pelo fato dele possuir múltiplos usos.
+Segundo o autor, um ótimo exemplo de [Builder Design Pattern](./builder-design-pattern/index.html) é o método `$` do jQuery pelo fato dele possuir múltiplos usos.
 Normalmente é uma abordagem utilizada quando precisamos agrupar múltiplos objetos e precisamos que eles sejam utilizados por um terceiro objeto.
+Foi difícil entender, difícil refatorar e ainda não imagino cenário de utilização para tanto.
+
+## **Aula 12**
+### The Prototype Design Pattern
+
+A reutilização dos métodos desta abordagem torna mais eficiente o uso de memória e é de fácil implementação.
+
+
 
 
 

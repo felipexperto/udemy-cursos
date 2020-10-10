@@ -112,8 +112,16 @@ Foi difícil entender, difícil refatorar e ainda não imagino cenário de utili
 ### The Prototype Design Pattern
 
 A reutilização dos métodos desta abordagem torna mais eficiente o uso de memória e é de fácil implementação.
+Basicamente é apresentado um loop `for in` que desempenha a cópia dos `prototypes` de um objeto **A** para **B**.
+Após criar o objeto **B** e invocar a função `clone` é possível utilizar todos os métodos(`prototypes`) do objeto **A**.
 
+---
 
+# Structural Design Pattern - Part 1
 
+## **Aula 13**
+### Abstracting Our Singleton
+
+https://www.dofactory.com/javascript/design-patterns/adapter
 
 

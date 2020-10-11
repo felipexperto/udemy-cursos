@@ -84,29 +84,31 @@ Em outras palavras:
 
 Uma vantagem do Singleton é que você pode controlar quando será instanciado, ou seja, não é instanciado no início da aplicação.  
 Além disso, a ideia é que ele seja iniciado somente uma vez agindo como uma interface global.  
-O exemplo de [Singleton Design Pattern](./singleton-design-pattern/index.html) foi testado utilizando o evento de `click` e `keypress` e, foi possível compartilhar o estado de um array, adicionando itens por meio de clique na página ou apertando a letra "c".
+O exemplo de [Singleton Design Pattern](./singleton-design-pattern) foi testado utilizando o evento de `click` e `keypress` e, foi possível compartilhar o estado de um array, adicionando itens por meio de clique na página ou apertando a letra "c".
 
 ## **Aula 8**
 ### The Factory Design Pattern
 
 Para quando você precisa de controle sobre a customização de um item.  
 Extrai a criação de um item do objeto que está criando-o, ou seja, a criação ocorre de uma maneira mais genérica, facilitando atualizações ou novas versões destes itens por não estarem engessados.
-No exemplo de [Factory Design Pattern](./factory-design-pattern/index.html) extraímos a função `create` da Singleton e implementamos o retorno do parâmetro `color`, sendo `red` ou `blue`.
+No exemplo de [Factory Design Pattern](./factory-design-pattern) extraímos a função `create` da Singleton e implementamos o retorno do parâmetro `color`, sendo `red` ou `blue`.
 
 ## **Aula 9**
 ### The Abstract Factory Design Pattern
 
 Mais dinâmica e genérica do que a Factory e você só criará uma Abstract Factory caso a primeira esteja com a lógica muito complicada, engessada e/ou seja necessário adicionar mais funcionalidades.  
-No exemplo de [Abstract Factory Design Pattern](./abstract-factory-design-pattern/index.html) criamos uma função e atribuímos o método `create` à um `prototype` de `redCircle` e 
+No exemplo de [Abstract Factory Design Pattern](./abstract-factory-design-pattern) criamos uma função e atribuímos o método `create` à um `prototype` de `redCircle` e 
 `blueCircle`, essa abstração permite o registro de múltiplos `types` de objetos e permite verificar quais são classes válidas `if (cls.prototype.create)` para criar itens.  
 Ainda sem certeza de onde utilizar isso 🤷‍♂️
+Acho que merece um exemplo melhor 🤔
 
 ## **Aula 10 e 11**
 ### The Builder Design Pattern
 
-Segundo o autor, um ótimo exemplo de [Builder Design Pattern](./builder-design-pattern/index.html) é o método `$` do jQuery pelo fato dele possuir múltiplos usos.
+Segundo o autor, um ótimo exemplo de [Builder Design Pattern](./builder-design-pattern) é o método `$` do jQuery pelo fato dele possuir múltiplos usos.
 Normalmente é uma abordagem utilizada quando precisamos agrupar múltiplos objetos e precisamos que eles sejam utilizados por um terceiro objeto.
 Foi difícil entender, difícil refatorar e ainda não imagino cenário de utilização para tanto.
+Acho que merece um exemplo melhor 🤔 [2]
 
 ## **Aula 12**
 ### The Prototype Design Pattern
@@ -114,6 +116,7 @@ Foi difícil entender, difícil refatorar e ainda não imagino cenário de utili
 A reutilização dos métodos desta abordagem torna mais eficiente o uso de memória e é de fácil implementação.
 Basicamente é apresentado um loop `for in` que desempenha a cópia dos `prototypes` de um objeto **A** para **B**.
 Após criar o objeto **B** e invocar a função `clone` é possível utilizar todos os métodos(`prototypes`) do objeto **A**.
+Confira aqui o [Prototype Design Pattern](./prototype-design-pattern).
 
 ---
 
@@ -142,7 +145,7 @@ Basicamente o que ele explica é:
 - Sacou? 
 
 
-Segundo o autor, o contexto de utilização de um [Adapter Design Pattern](./adapter-design-pattern/index.html) seria quando você possui dois objetos diferentes, eles não sabem interagir entre si e você precisa fazer esta ponte. Por exemplo, quando novos componentes precisam ser integrados na aplicação.
+Segundo o autor, o contexto de utilização de um [Adapter Design Pattern](./adapter-design-pattern) seria quando você possui dois objetos diferentes, eles não sabem interagir entre si e você precisa fazer esta ponte. Por exemplo, quando novos componentes precisam ser integrados na aplicação.
 
 Não contente com isso, fui atrás de mais uma referência e [encontrei este post](https://medium.com/javascript-in-plain-english/javascript-design-patterns-adapter-explained-cbcffbb4b8bc) que trás algumas boas definições:
 

@@ -122,6 +122,35 @@ Após criar o objeto **B** e invocar a função `clone` é possível utilizar to
 ## **Aula 13**
 ### Abstracting Our Singleton
 
-https://www.dofactory.com/javascript/design-patterns/adapter
+Nessa aula o autor começa a deixar o Single mais abstrato para futuros usos. Irrelevante.
+
+## **Aula 14**
+### The Adapter Design Pattern
+
+Assisti a aula, vi o código, acredito que tem uma complexidade desnecessária.  
+Decidi seguir exemplicando este Design Pattern com [este exemplo do site dofactory](https://www.dofactory.com/javascript/design-patterns/adapter).  
+O objetivo do exemplo do dofactory é recriar uma função de frete que no final oferece mais segurança (por ter autenticação) e um preço mais barato.  
+Apesar da ideia ser boa, a aplicação me parece fora de contexto como se estivéssemos duplicando código e, por isso, resolvi modificá-lo.
+
+Carlos Caballero, neste post intitulado [Design Patterns - Adapter ](https://dev.to/carlillo/design-patterns---adapter-2pi3) usa um exemplo muito bom fazendo uma comparação com Dragon Ball. 🤷‍♂️  
+Basicamente o que ele explica é: 
+
+- Imagine que você tem uma classe `Guerreiro` com o método de `Ataque`;
+- Saiyajins([Goku](https://dragonball.fandom.com/pt-br/wiki/Goku)) e Namekuseijins([Piccolo](https://dragonball.fandom.com/pt-br/wiki/Piccolo)) são Guerreiros e portanto tem essa habilidade;
+- Androids, como por exemplo o [Android 17](https://dragonball.fandom.com/wiki/Android_17) não tem essa habilidade;
+- Portanto, precisaremos criar um `Adaptador` que importa a classe `Guerreiro` e aplica nos Androids para que eles possam atacar também;
+- Sacou? 
+
+
+Segundo o autor, o contexto de utilização de um [Adapter Design Pattern](./adapter-design-pattern/index.html) seria quando você possui dois objetos diferentes, eles não sabem interagir entre si e você precisa fazer esta ponte. Por exemplo, quando novos componentes precisam ser integrados na aplicação.
+
+Não contente com isso, fui atrás de mais uma referência e [encontrei este post](https://medium.com/javascript-in-plain-english/javascript-design-patterns-adapter-explained-cbcffbb4b8bc) que trás algumas boas definições:
+
+- > Adapter is a structural design pattern so it can improve quality and scalability of your code, massively.
+
+- > Adapter Pattern is an abstraction for nasty or 3rd party code, you need in your main clean codebase.
+
+Isso explica o porquê deste design pattern também ser chamado de **Wrapper Pattern**.
+Ele também é utilizado para envelopar um código de terceiros e nos auxiliar a mantermos controle com um único ponto de inserção.
 
 

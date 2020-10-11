@@ -99,7 +99,7 @@ No exemplo de [Factory Design Pattern](./factory-design-pattern) extraímos a fu
 Mais dinâmica e genérica do que a Factory e você só criará uma Abstract Factory caso a primeira esteja com a lógica muito complicada, engessada e/ou seja necessário adicionar mais funcionalidades.  
 No exemplo de [Abstract Factory Design Pattern](./abstract-factory-design-pattern) criamos uma função e atribuímos o método `create` à um `prototype` de `redCircle` e 
 `blueCircle`, essa abstração permite o registro de múltiplos `types` de objetos e permite verificar quais são classes válidas `if (cls.prototype.create)` para criar itens.  
-Ainda sem certeza de onde utilizar isso 🤷‍♂️
+Ainda sem certeza de onde utilizar isso 🤷‍♂️  
 Acho que merece um exemplo melhor 🤔
 
 ## **Aula 10 e 11**
@@ -107,7 +107,7 @@ Acho que merece um exemplo melhor 🤔
 
 Segundo o autor, um ótimo exemplo de [Builder Design Pattern](./builder-design-pattern) é o método `$` do jQuery pelo fato dele possuir múltiplos usos.
 Normalmente é uma abordagem utilizada quando precisamos agrupar múltiplos objetos e precisamos que eles sejam utilizados por um terceiro objeto.
-Foi difícil entender, difícil refatorar e ainda não imagino cenário de utilização para tanto.
+Foi difícil entender, difícil refatorar e ainda não imagino cenário de utilização para tanto.  
 Acho que merece um exemplo melhor 🤔 [2]
 
 ## **Aula 12**

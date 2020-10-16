@@ -156,4 +156,30 @@ Não contente com isso, fui atrás de mais uma referência e [encontrei este pos
 Isso explica o porquê deste design pattern também ser chamado de **Wrapper Pattern**.
 Ele também é utilizado para envelopar um código de terceiros e nos auxiliar a mantermos controle com um único ponto de inserção.
 
+## **Aula 15**
+### The Composite Design Pattern
+
+
+## **Aula 16**
+### The Decorator Design Pattern
+
+O [Decorator Design Pattern](./decorator-design-pattern) estende o comportamento de um objeto dinamicamente.  
+Você é capaz de adicionar funcionalidades sem criar uma sub-classe ou alterar a interface/constructor original.  
+E ele realiza esse processo envelopando o objeto original.
+
+A questão aqui é a seguinte (adaptação de [doFactory](https://www.dofactory.com/javascript/design-patterns/decorator)):  
+Decorators provem flexibilidade a linguagens de tipos estáticos permitindo mudanças no momento do runtime.  
+O Javascript já é uma linguagem dinâmica e esse comportamento é nativo.  
+Por essa razão, o Decorator Pattern é menos relevante para pessoas desenvolvedoras que trabalham com Javascript.
+
+---
+
+# Structural Design Pattern - Part 2
+
+## **Aula 17**
+### The Fly Weight Design Pattern
+
+Reduz o uso de memória em objetos grandes extraindo propriedades e métodos.
+
+
 

@@ -156,4 +156,41 @@ Não contente com isso, fui atrás de mais uma referência e [encontrei este pos
 Isso explica o porquê deste design pattern também ser chamado de **Wrapper Pattern**.
 Ele também é utilizado para envelopar um código de terceiros e nos auxiliar a mantermos controle com um único ponto de inserção.
 
+## **Aula 15**
+### The Composite Design Pattern
+
+
+## **Aula 16**
+### The Decorator Design Pattern
+
+O [Decorator Design Pattern](./decorator-design-pattern) estende o comportamento de um objeto dinamicamente.  
+Você é capaz de adicionar funcionalidades sem criar uma sub-classe ou alterar a interface/constructor original.  
+E ele realiza esse processo envelopando o objeto original.
+
+A questão aqui é a seguinte (adaptação de [doFactory](https://www.dofactory.com/javascript/design-patterns/decorator)):  
+Decorators provem flexibilidade a linguagens de tipos estáticos permitindo mudanças no momento do runtime.  
+O Javascript já é uma linguagem dinâmica e esse comportamento é nativo.  
+Por essa razão, o Decorator Pattern é menos relevante para pessoas desenvolvedoras que trabalham com Javascript.
+
+---
+
+# Structural Design Pattern - Part 2
+
+## **Aula 17**
+### The Fly Weight Design Pattern
+
+Busca reduzir o uso de memória na aplicação extraindo propriedades e métodos de objetos grandes e compartilhando o máximo possível de dados.
+Encontrei esse artigo que explica de maneira mais completa do que o autor: [Javascript Design patterns: Flyweight Pattern](https://dev.to/jazsmith24/javascript-design-patterns-flyweight-pattern-1g5g) e diversas falas estão sendo adaptadas no texto abaixo.
+
+#### **Como funciona?**
+
+Cada objeto "flyweight" é dividido em duas partes:
+
+- **Estado intrínseco:** Estado armazenado no objeto Flyweight;
+- **Estado extrínseco:** É armazenado ou processo por objetos clientes e passado para o Flyweight onde suas operações são invocadas.
+
+#### **Prós e Contras**
+
+- **Prós:** Economiza espaço (e se torna mais evidente a medida que mais objetos flyweights são compartilhados) e auxilia a enfrentar restriçõs de memória.
+- **Contras:** Pode introduzir um custo associado à transferir, encontrar e/ou processar estado extrínseco, especialmente se este já foi previamente armazenado como um estado intrínseco.
 

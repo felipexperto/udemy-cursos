@@ -100,6 +100,13 @@ Definição:
 
 > Funções que podem receber outras funções como argumento ou retornam uma função
 
+## **Polimorfismo**
+
+> **A habilidade de chamar o mesmo método em diferentes objetos.**  
+> Por exmeplo, ter uma classe que tem um certo método;  
+> Criar uma nova classe que vai herdar essa classe (com o método);  
+> E a partir dessa nova classe poder usar um método que já está na classe pai sem precisar escrever esse método novamente na classe filho.
+
 ## **Call vs Apply vs Bind**
 
 ```

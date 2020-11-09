@@ -130,7 +130,7 @@ Definição:
 ## **Polimorfismo**
 
 > **A habilidade de chamar o mesmo método em diferentes objetos.**  
-> Por exmeplo, ter uma classe que tem um certo método;  
+> Por exemplo, ter uma classe que tem um certo método;  
 > Criar uma nova classe que vai herdar essa classe (com o método);  
 > E a partir dessa nova classe poder usar um método que já está na classe pai sem precisar escrever esse método novamente na classe filho.
 
@@ -155,7 +155,7 @@ saudacao.call(dados, 28);
 const dados = { nome: 'Fulano' };
 const argumentos = [28];
 const saudacao = function(idade) {
-  console.log(`Bem-vindo ${this.nome}, sua idade é {idade}`);
+  console.log(`Bem-vindo ${this.nome}, sua idade é ${idade}`);
 };
 saudacao.apply(dados, argumentos);
   
@@ -167,7 +167,7 @@ saudacao.apply(dados, argumentos);
 */
 const dados = { nome: 'Fulano' };
 const saudacao = function(idade) {
-  console.log(`Bem-vindo ${this.nome}, sua idade é {idade}`);
+  console.log(`Bem-vindo ${this.nome}, sua idade é ${idade}`);
 };
 const bound = saudacao.bind(dados);
 bound(28);

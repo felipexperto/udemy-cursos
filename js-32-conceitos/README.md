@@ -94,6 +94,33 @@ const cachorro = Mamifero('cachorro','auau');
 console.log(cachorro);
 ```
 
+## **Currying**
+
+Transforma uma função com múltiplos argumentos em uma série de execução de funções;
+
+```
+// sem currying
+const dragao = (nome, tamanho, elemento) => {
+  return `${nome} é um dragão ${tamanho} e cospe ${elemento}!`
+}
+console.log(dragao('Mushu', 'pequeno', 'fogo'));
+```
+
+```
+// com currying
+// opção 01
+const dragao = (nome) => (tamanho) => (elemento) => {
+  return `${nome} é um dragão ${tamanho} e cospe ${elemento}!`
+}
+console.log('Opção 01', dragao('Mushu')('pequeno')('fogo'));
+
+// opção 02
+const mushu = dragao('Mushu');
+const mushuPequeno = mushu('pequeno');
+console.log('Opção 02', mushuPequeno('fogo'));
+```
+
+
 ## **High Order Functions**
 
 Definição: 
@@ -145,6 +172,8 @@ const saudacao = function(idade) {
 const bound = saudacao.bind(dados);
 bound(28);
 ```
+
+
 
 ## **Sequência de comparações com igualdade ampla ( `==` )**
 

@@ -194,3 +194,51 @@ Cada objeto "flyweight" é dividido em duas partes:
 - **Prós:** Economiza espaço (e se torna mais evidente a medida que mais objetos flyweights são compartilhados) e auxilia a enfrentar restriçõs de memória.
 - **Contras:** Pode introduzir um custo associado à transferir, encontrar e/ou processar estado extrínseco, especialmente se este já foi previamente armazenado como um estado intrínseco.
 
+---
+
+## **Aula 18 e 19**
+### The Façade Design Pattern
+
+Neste ponto abandonei as explicações do curso que se tornam cada vez mais complexas a medida que o autor busca reutilizar o mesmo código para implementar todos os conceitos tornando-o verboso e se provando uma ideia não tão boa no final das contas.
+
+Disponibiliza uma interface a qual bloqueia o cliente de uma funcionalidade complexa em um ou mais subsistemas.  
+Seu objetivo é prover uma interface de alto nível que faz o subsistema ou toolkit fácil de ser utilizado.  
+O Façade expõe somente o que é necessário e apresenta uma interface mais limpa e compreensível.
+
+## **Aula 20**
+### The Brige Design Pattern
+
+Autor informou que é igual ao padrão Adapter, com a diferença que é criado antes visando uma implementação melhor ao invés de depois para "contornar" uma situação.
+
+## **Aula 21**
+### The Proxy Design Pattern
+
+
+---
+
+# Behavioral Design Pattern - Part 2
+
+## **Aula 22 e 23**
+### The Chain Of Responsibility
+
+- Conecta objetos uns aos outros, nenhum está no console;
+- Cada conexão decide se continua a corrente ou não;
+- [jQuery](https://jquery.com/) é um excelente exemplo.
+
+
+## **Aula 24 e 25**
+### The Observer Design Pattern
+
+> O Observer Pattern é um padrão popular usado em todos os tipos de aplicativos em JavaScript. A instância (ou model) mantém uma coleção de objetos (observadores) e irá notifica-los de todas as mudanças no seu estado. [Fonte](https://oieduardorabelo.medium.com/padr%C3%B5es-em-js-observer-pattern-bff0ecc55d01)
+
+- [Exemplo de Observer Design Pattern](https://www.dofactory.com/javascript/design-patterns/observer)
+- [Exemplo de Addy Osmany](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#observerpatternjavascript)
+
+## **Aula 26**
+### The State Design Pattern
+
+State Design Pattern [segundo dofactory](https://www.dofactory.com/javascript/design-patterns/state).
+
+
+
+

@@ -74,4 +74,55 @@ window.dataLayer.push({
 });
 ```
 
+# _Custom Dimensions_ e _metrics_ no Google Analytics
+
+## Introdução
+
+A maioria dos relatórios do Google Analytics serão semelhantes à isso aqui:
+
+![Tabela](./03-relatorio-analytics.png)
+
+### Dimensions
+
+**Dimensions** são atributos de dados (elementos, itens, interações).
+
+Exemplos de dimensions:
+
+- Page URL, Page Title
+- Event category, event action, event label
+- Product name, variant, id
+
+Uma **dimension** pode ter o escopo de Hit, Session, User ou Product.  
+
+- Hit: Se você quer que uma dimension inclua toda vez que um usuário visite uma página em particular ou performe uma ação em particular;
+- Session: Organizar dados pela duração de uma sessão;
+- User: Organizar dados por usuário.
+- Product: Agrupar dados de um produto em particular;
+
+
+![Hit-scoped custom dimension](./04-cd-hit-scoped.png)
+![Session-scoped custom dimension](./05-cd-session-scoped.png)
+![User-scoped custom dimension](./06-cd-user-scoped.png)
+
+### Metrics
+
+**Metrics** são medidas quantitativas (números, porcentagens, tempo) que ajudam a metrificar as dimensions.
+
+Exemplos de metrics:
+
+- Número de visualizações de um vídeo
+- Número de visualizações de um popup de email
+
+
+
+## Existe um limite de Dimensions e Metrics?
+
+A conta gratuita do GA permite criar até 20 Custom dimensions e 20 Custom metrics.
+
+
+
+
+
+
+
 

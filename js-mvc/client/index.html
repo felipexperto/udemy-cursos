@@ -37,7 +37,10 @@
         <button class="btn btn-primary text-center" type="button">
             Importar Negociações
         </button>
-        <button class="btn btn-primary text-center" type="button">
+        <button
+          id="apagar"
+          class="btn btn-primary text-center"
+          type="button">
             Apagar
         </button>
     </div> 
@@ -62,6 +65,20 @@
       form.addEventListener("submit", function (event) {
         negociacaoController.adiciona(event);
       });
+
+      const btnApagar = document.getElementById("apagar");
+      btnApagar.addEventListener("click", function (event) {
+        negociacaoController.apaga(event);
+      });
+    </script>
+    <script>
+      let negociacao = new Proxy(new Negociacao(new Date(), 1, 100), {
+        get: function (target, prop, receiver) {
+          console.log(`${prop} interceptada`);
+        }
+      });
+      console.log(negociacao.quantidade);
+      console.log(negociacao.valor);
     </script>
 </body>
 </html>
